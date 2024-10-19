@@ -1,0 +1,7 @@
+{
+  "name": "TenkVerse",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
