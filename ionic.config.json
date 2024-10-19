@@ -1,0 +1,7 @@
+{
+  "name": "Pray With Me",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
