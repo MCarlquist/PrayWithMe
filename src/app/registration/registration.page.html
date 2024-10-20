@@ -6,8 +6,47 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
-    <ion-img src="/assets/icon/logo.png"></ion-img>
+    <h1 class="ion-text-center">PrayWithMe</h1>
+    <ion-img src="./assets/header.PNG"></ion-img>
   </ion-header>
-  <h1>Hey</h1>
-    <a routerLink="/app/tab1">Home</a>
-  </ion-content>
+  <!-- <a routerLink="/app/tab1">Home</a> -->
+  <div class="flex-container">
+    <ion-button expand="full" id="open-signup-modal">Sign Up</ion-button>
+    <ion-button expand="full" fill="outline" id="open-signin-modal">Sign In</ion-button>
+  </div>
+  <ion-modal trigger="open-signup-modal" (willDissmiss)="onDismiss($event)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Cancel</ion-button>
+          </ion-buttons>
+          <ion-title>Sign Up</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">Sign Up</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-item>
+          <ion-input
+            label="Enter your name"
+            labelPlacement="stacked"
+            type="text"
+            placeholder="Your name"
+            [(ngModel)]="name"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            label="Enter your E-mail"
+            labelPlacement="stacked"
+            type="email"
+            placeholder="Your E-mail"
+            [(ngModel)]="email"
+          ></ion-input>
+        </ion-item>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

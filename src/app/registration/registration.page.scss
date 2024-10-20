@@ -1,0 +1,14 @@
+
+h1 {
+    font-family: 'Sofia', cursive;
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+.flex-container {
+    padding-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+}
